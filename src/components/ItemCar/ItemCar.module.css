@@ -1,0 +1,19 @@
+.carItem {
+    background-color: gray;
+    color: red;
+    width: 200px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+
+}
+
+.carItem__picture {
+    width: 200px;
+}
+
+.title {
+    text-align: center;
+}

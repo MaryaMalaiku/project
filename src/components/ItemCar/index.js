@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './ItemCar.module.css.scss'
+import styles from './ItemCar.module.scss'
 
 class ItemCar extends React.Component {
 

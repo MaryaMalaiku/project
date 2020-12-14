@@ -11,6 +11,16 @@ $width_block: 200px;
     flex-direction: column;
     justify-content: left;
 
+    &__liked {
+        background: $red;
+        color: wheat;
+    }
+    
+    &__to_like {
+        background: wheat;
+        color: $red;
+    }
+
 }
 
 .carItem__picture {
@@ -19,14 +29,4 @@ $width_block: 200px;
 
 .title {
     text-align: center;
-}
-
-&__liked {
-    background: $red;
-    color: wheat;
-}
-
-&__to_like {
-    background: wheat;
-    color: $red;
 }

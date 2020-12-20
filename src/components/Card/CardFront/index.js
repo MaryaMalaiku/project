@@ -7,9 +7,9 @@ function CardFront(props) {
 
     return (
         <div className={styles.frontBlock}>
-            <img className={styles.frontBlock__img}>{imageSrc}</img>
-            <p className={styles.frontBlock__title}>{title}</p>
-            <p className={styles.frontBlock__prise}>Prise:{price}</p>
+            <img className={styles.frontBlock__img} src={imageSrc} alt='Car'/>
+            <h3 className={styles.frontBlock__title}>{title}</h3>
+            <p className={styles.frontBlock__prise}>Prise: {price}</p>
         </div>
     );
 }

@@ -3,11 +3,11 @@ import styles from './CardBack.module.scss'
 
 function CardBack(props) {
 
-const {text_ukr} = props.backData;
+const {description} = props.backData;
 
     return (
-        <div className={styles.back__block}>
-            <p className={styles.back__text}>{text_ukr}</p>
+        <div className={styles.backBlock}>
+            <p className={styles.backBlock__description}>{description}</p>
         </div>
     );
 }

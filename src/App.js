@@ -1,74 +1,31 @@
+import React from 'react'
 import './App.scss';
 import Card from './components/Card/index';
+import carData from './db';
 
-const data = [
-  {
-    front: {text_eng: "time"}, 
-    back: {text_ukr: "час"}
-  },
+class App extends React.Component {
 
-  {
-    front: {text_eng: "information"},
-    back: {text_ukr: "інформація"}
-  },
+  constructor() {
+    super();
 
-  {
-    front: {text_eng: "people"},
-    back: {text_ukr: "люди"}
-  },
+    this.state = {
+      car: carData,
+    };
 
-  {
-    front: {text_eng: "thing"},
-    back: {text_ukr: "річ"}
-  },
+  }
 
-  {
-    front: {text_eng: "community"},
-    back: {text_ukr: "спільнота"}
-  },
+  render() {
+    return (
+      <div className="App">
+        <div className='cards'>
 
-  {
-    front: {text_eng: "man"},
-    back: {text_ukr: "чоловік"}
-  },
+          { this.state.car.map (element => <Card text={element}/>) }
 
-  {
-    front: {text_eng: "woman"},
-    back: {text_ukr: "жінка"}
-  },
-
-  {
-    front: {text_eng: "way"},
-    back: {text_ukr: "шлях"}
-  },
-
-  {
-    front: {text_eng: "life"},
-    back: {text_ukr: "життя"}
-  },
-
-  {
-    front: {text_eng: "child"},
-    back: {text_ukr: "дитина"}
-  },
-]
-
-function App() {
-  return (
-    <div className="App">
-      <div className='Cards'>
-        <Card text={data[0]}/>
-        <Card text={data[1]}/>
-        <Card text={data[3]}/>
-        <Card text={data[4]}/>
-        <Card text={data[5]}/>
-        <Card text={data[6]}/>
-        <Card text={data[7]}/>
-        <Card text={data[8]}/>
-        <Card text={data[9]}/>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+
 }
 
 export default App;

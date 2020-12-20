@@ -1,4 +1,4 @@
-.front__block {
+.frontBlock {
     background: white;
     color: black;
     width: 100%;
@@ -7,4 +7,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+  &__img {
+
   }
+
+  &__title {
+
+  }
+
+  &__price {
+
+  }
+  
+}

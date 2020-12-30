@@ -43,6 +43,11 @@ class Card extends React.Component {
                 </div> 
 
                 </div>
+
+                <button className={styles.card__button_del} onClick={ () => {
+                  this.props.deleteCard(this.props.text);
+                }
+                }>Delete</button>
                 
             </div>
         

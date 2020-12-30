@@ -3,9 +3,12 @@
     text-align: center;
     cursor: pointer;
     perspective: 1000px;
-    height: 500px;
+    height: 600px;
     width: 300px;
     margin: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   
     &.isBack {
       .card__Inner {
@@ -40,5 +43,13 @@
     &__back {
       background: none;
       transform: rotateY(180deg);
+    }
+
+    &__button_del {
+      background: black;
+      color: white;
+      padding: 20px 40px;
+      margin: 20px;
+      font-size: 15px;
     }
   }

@@ -1,7 +1,6 @@
 import React from 'react'
 import './App.scss';
 import Card from './components/Card/index';
-import carData from './db';
 
 class App extends React.Component {
 
@@ -14,6 +13,8 @@ class App extends React.Component {
     };
 
     console.log('constructor');
+
+    this.deleteCard = this.deleteCard.bind(this)
 
   }
 
@@ -35,7 +36,7 @@ class App extends React.Component {
     })
     .then((data) => {
       this.setState({
-        apiData: data.result,
+        apiData: data.results,
       })
     })
   }
@@ -45,7 +46,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <div className='cards'>
-          { this.state.car.map ( (element) => { 
+          { this.state.apiData.slice(0, 5).map ( (element) => { 
             return ( 
             <Card key={element.id} text={element} deleteCard={this.deleteCard}/> 
             ) 

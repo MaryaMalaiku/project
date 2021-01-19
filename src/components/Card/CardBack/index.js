@@ -3,11 +3,14 @@ import styles from './CardBack.module.scss'
 
 function CardBack(props) {
 
-const {description} = props.backData;
+const cardDescription = props.backData.description;
 
     return (
         <div className={styles.backBlock}>
-            <p className={styles.backBlock__description}>{description}</p>
+            <div className="description">
+                {cardDescription.length > 300 ? `${cardDescription.slice(0, 297)}...` : cardDescription}
+            </div>
+            <p className={styles.backBlock} target="_blank">See more</p>
         </div>
     );
 }

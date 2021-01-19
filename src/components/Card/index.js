@@ -26,7 +26,15 @@ class Card extends React.Component {
       console.log(this);
 
 
-      const {front, back} = this.props.text;
+      const data = this.props.text;
+      const front = {
+        title: data.name,
+          voteAverage: data.vote_average,
+        imageSrc: data.backdrop_path,
+      };
+      const back = {
+        description: data.overview
+      };
       const cardClass = [styles.card];
       const {isBack} = this.state;
       if (isBack) { cardClass.push(styles.isBack) }
